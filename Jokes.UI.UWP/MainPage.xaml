@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Jokes.UI.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Jokes.UI.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/paper-1074131_1920.jpg" Stretch="UniformToFill" Opacity="0.6"/>
+    </Page.Background>
+
+    <Grid>
+        <NavigationView x:Name="JokeNavView" IsSettingsVisible="False" ItemInvoked="JokeNavView_ItemInvoked" IsPaneOpen="False" PaneDisplayMode="LeftMinimal" IsBackButtonVisible="Collapsed">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="Home" x:Name="HomeItem" Icon="Home" Content="Home"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Tag="General" Icon="Globe" Content="General"/>
+                <NavigationViewItem Tag="Programming" Icon="Copy" Content="Programming"/>
+                <NavigationViewItem Tag="Info" Content="Info" Tapped="NavigationViewItem_Tapped">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE946;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.Content>
+                <Frame x:Name="JokeFrame" Padding="24"/>
+            </NavigationView.Content>
+        </NavigationView>
+    </Grid>
+</Page>

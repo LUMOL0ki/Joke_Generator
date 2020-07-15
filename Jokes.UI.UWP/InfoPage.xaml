@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="Jokes.UI.UWP.InfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Jokes.UI.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBlock x:Name="Author" Text="Lukáš Moravec" HorizontalAlignment="Center" FontSize="64"/>
+            <TextBlock x:Name="Year" Text="2020" HorizontalAlignment="Center" FontSize="56"/>
+        </StackPanel>
+    </Grid>
+</Page>
